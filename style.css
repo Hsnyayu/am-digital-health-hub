@@ -282,6 +282,18 @@ nav ul li a.active-link {
   border-radius: 3px;
 }
 
+/* --- SCROLL REVEAL ANIMATION (MOVED HERE FOR ALL SCREENS) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px); /* Pushes the element down slightly */
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* Brings it back to its original position */
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
   header {
@@ -331,20 +343,6 @@ nav ul li a.active-link {
     transform: translateY(-8px) rotate(-45deg);
   }
   
-  
-  /* --- SCROLL REVEAL ANIMATION --- */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px); /* Pushes the element down slightly */
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0); /* Brings it back to its original position */
-}
-
-
   /* Adjust other sections for mobile */
   .hero-content h1 {
     font-size: 2.5rem;
@@ -354,7 +352,6 @@ nav ul li a.active-link {
     gap: 40px;
   }
 }
-
 
 /* =========================================
    PARTNERS INFINITE SCROLL ANIMATION
@@ -419,7 +416,6 @@ nav ul li a.active-link {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 
 /* =========================================
    NEW ANIMATIONS: PULSE & HOVER LIFT
